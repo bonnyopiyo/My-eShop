@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorAccent"
+    android:elevation="3dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/product_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pic7" />
+
+    <TextView
+        android:id="@+id/product_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Aeleseen for Queens"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/product_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Kshs.7,995/-"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_title" />
+
+    <TextView
+        android:id="@+id/cutted_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Kshs.9,995/-"
+        app:layout_constraintBottom_toBottomOf="@+id/product_price"
+        app:layout_constraintEnd_toStartOf="@+id/product_price" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="@+id/cutted_price"
+        app:layout_constraintEnd_toEndOf="@+id/cutted_price"
+        app:layout_constraintStart_toStartOf="@+id/cutted_price"
+        app:layout_constraintTop_toBottomOf="@+id/product_title" />
+
+    <LinearLayout
+        android:id="@+id/buy_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorRed"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:padding="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_image">
+
+        <TextView
+            android:id="@+id/tv_buying"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="Click The Buy Button To Purchase"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/buying_btn"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:background="@drawable/border_background"
+            android:text="BUY"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/remove_item_btn"
+        android:layout_width="0dp"
+        android:layout_height="76dp"
+        android:orientation="horizontal"
+        android:background="@color/colorAccent"
+        android:elevation="3dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buy_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Remove Item"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:drawableStart="@mipmap/delete"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
